@@ -39,7 +39,7 @@ public class Ejemplo01 {
         for (int i = 1; i <= limite; i++) {
             resultado = tabla * i;
             cadenaFinal = String.format("%s%d * %d = %d\n",
-                    cadenaFinal, tabla, i, resultado);
+                    cadenaFinal, tabla, i, resultado);   
         }
         
         System.out.printf("%s\n", cadenaFinal);
