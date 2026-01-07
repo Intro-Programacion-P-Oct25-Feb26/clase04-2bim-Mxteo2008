@@ -17,6 +17,10 @@ public class Ejemplo03 {
                                          // obtenerSuma
         System.out.printf("El valor de la suma es: %d\n", valor);
         
+        System.out.printf(suma);
+        //existe error ya que la variable suma no está definido en el main global,
+        // solo dentro de la función
+        
         // System.out.printf("El valor de la suma es: %d\n", obtenerSuma(10, 30));
     }
     
