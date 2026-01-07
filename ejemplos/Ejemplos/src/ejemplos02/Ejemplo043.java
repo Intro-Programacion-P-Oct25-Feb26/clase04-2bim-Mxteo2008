@@ -22,8 +22,13 @@ public class Ejemplo043 {
         obtenerSuma(v1, v2);
                 
         }
-         // se invoca al método (procedimiento) obtenerSuma
+        /*
+        En este ejercicio estamos sumando los valores que se encuentran dentro 
+        de los 2 arreglos, para ello creamos un ciclo repretitivo donde cada vez 
+        se enviarán los argumentos al procedimiendo en el cual se sumarán cada 
+        uno de los valores entre en arreglo valores1 y valores2
         
+        */
     }
         
     public static void obtenerSuma(int a, int b){
