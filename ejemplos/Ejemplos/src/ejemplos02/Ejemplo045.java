@@ -13,40 +13,42 @@ public class Ejemplo045 {
 
     public static void main(String[] args) {
         // 
-        
-        int [][] arreglo1 = {{1,2,3}, {3,2,4}, {2,6,2}};
-        int [][] arreglo2 = {{1,2,3}, {2,2,2}, {3,1,2}};
-        int [][] arreglo3 = llenarMatriz(arreglo1, arreglo2);
-        double [][] arreglo4 = llenarMatriz2 (arreglo1, arreglo2);
-      
-        
+
+        int[][] arreglo1 = {{1, 2, 3}, {3, 2, 4}, {2, 6, 2}};
+        int[][] arreglo2 = {{1, 2, 3}, {2, 2, 2}, {3, 1, 2}};
+        int[][] arreglo3 = llenarMatriz(arreglo1, arreglo2);
+        double[][] arreglo4 = llenarMatriz2(arreglo1, arreglo2);
+
         obtenerReporte(arreglo1);
         obtenerReporte(arreglo2);
         obtenerReporte(arreglo3);
+        obtenerReporte(arreglo4);
     }
-    public static int [][] llenarMatriz(int [][] x, int [][] y){
-        int [][] z = new int [3][3];
+
+    public static int[][] llenarMatriz(int[][] x, int[][] y) {
+        int[][] z = new int[3][3];
         for (int i = 0; i < x.length; i++) {
             for (int j = 0; j < x[i].length; j++) {
-                 z[i][j] = obtenerMultiplicacion(x[i][j], 
-                        y[i][j]);     
+                z[i][j] = obtenerMultiplicacion(x[i][j],
+                        y[i][j]);
             }
         }
         return z;
- 
+
     }
-    public static double [][] llenarMatriz2(int [][] x, int [][] y){
-        int [][] z = new int [3][3];
+
+    public static double[][] llenarMatriz2(int[][] x, int[][] y) {
+        double[][] z = new double[3][3];
         for (int i = 0; i < x.length; i++) {
             for (int j = 0; j < x[i].length; j++) {
-                 z[i][j] = obtenerPotencia(x[i][j], 
-                        y[i][j]);     
+                z[i][j] = obtenerPotencia(x[i][j],
+                        y[i][j]);
             }
         }
         return z;
     }
-    
-    public static void obtenerReporte(int[][] arreglo1){
+
+    public static void obtenerReporte(int[][] arreglo1) {
         String cadena = "";
         for (int i = 0; i < arreglo1.length; i++) {
             for (int j = 0; j < arreglo1[i].length; j++) {
@@ -56,19 +58,30 @@ public class Ejemplo045 {
         }
         System.out.println(cadena);
     }
-    
-    public static int obtenerMultiplicacion(int a, int b){
+
+    public static int obtenerMultiplicacion(int a, int b) {
         int operacion;
         operacion = a * b;
         return operacion;
-        
+
     }
-    public static double obtenerPotencia(int a, int b){
+
+    public static double obtenerPotencia(int a, int b) {
         double operacion;
         operacion = Math.pow(a, b);
         return operacion;
-        
+
     }
-    
-    
+
+    public static void obtenerReporte(double[][] arreglo1) {
+        String cadena = "";
+        for (int i = 0; i < arreglo1.length; i++) {
+            for (int j = 0; j < arreglo1[i].length; j++) {
+                cadena = String.format("%s%.2f\t", cadena, arreglo1[i][j]);
+            }
+            cadena = String.format("%s\n", cadena);
+        }
+        System.out.println(cadena);
+    }
+
 }
